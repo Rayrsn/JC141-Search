@@ -11,7 +11,13 @@ async function search(){
     console.log(document.getElementById("searchbar").value.toLowerCase());
     const url = "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json"
     document.getElementById("searchstatus").innerHTML = "Searching...";
-    const response = await fetch(url);
+    // Add Access Control Allow Origin headers
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        }
+    });
     const results = await response.json();    
     results.forEach(element => {  
         // if results has display set to none then set it to block
