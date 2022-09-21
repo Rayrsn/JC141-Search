@@ -1,0 +1,112 @@
+body {
+    background-color: #22232a;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+li.list-header, li.list-entry{
+    display : table-row;
+}
+li.list-entry {
+    border-top: 1px solid #ccc;
+}
+span.list-header{
+    background: #d2b9a6;
+    border: 1px solid #fff;
+}
+span.list-item {
+    color:#fff;
+    display: table-cell;
+    padding: 3px;
+    border: 1px solid #4f4f4f;
+}
+span.list-item-header {
+    color:#000;
+    display: table-cell;
+    padding: 3px;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+#searchstatus{
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.search-box {
+	border: solid 5px black;
+	display: inline-block;
+	position: relative;
+	border-radius: 50px;
+    left : 50em;
+}
+
+.search-box input[type="text"] {
+	font-family: Raleway, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	width: 50px;
+	height: 50px;
+	padding: 5px 40px 5px 10px;
+	border: none;
+	box-sizing: border-box;
+	border-radius: 50px;
+	transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
+}
+
+.search-box input[type="text"]:focus {
+	outline: none;
+}
+
+.search-box input[type="text"]:focus, .search-box input[type="text"]:not(:placeholder-shown) {
+	width: 300px;
+	transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.search-box input[type="text"]:focus + button[type="reset"], .search-box input[type="text"]:not(:placeholder-shown) + button[type="reset"] {
+	bottom: 13px;
+	right: 10px;
+	transition: bottom 150ms ease-out 800ms, right 150ms ease-out 800ms;
+}
+
+.search-box input[type="text"]:focus + button[type="reset"]:after, .search-box input[type="text"]:not(:placeholder-shown) + button[type="reset"]:after {
+	top: 0;
+	right: 10px;
+	opacity: 1;
+	transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms, opacity 150ms ease 950ms;
+}
+
+.search-box button[type="reset"] {
+	background-color: transparent;
+	width: 25px;
+	height: 25px;
+	border: 0;
+	padding: 0;
+	outline: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: -13px;
+	right: -15px;
+	transition: bottom 150ms ease-out 150ms, right 150ms ease-out 150ms;
+}
+
+.search-box button[type="reset"]:before, .search-box button[type="reset"]:after {
+	content: "";
+	height: 25px;
+	border-left: solid 5px black;
+	position: absolute;
+	transform: rotate(-45deg);
+}
+
+.search-box button[type="reset"]:after {
+	transform: rotate(45deg);
+	opacity: 0;
+	top: -20px;
+	right: -10px;
+	transition: top 150ms ease-out, right 150ms ease-out, opacity 150ms ease-out;
+}
