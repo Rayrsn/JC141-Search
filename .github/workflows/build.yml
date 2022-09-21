@@ -4,7 +4,7 @@ name: Push releases.json
 on:
   push:
     branches:
-      - main
+      - master
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
@@ -17,4 +17,14 @@ jobs:
       - name: Download releases.json
       # download file from "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json"
         run: wget "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json" -O releases.json
+      - name: Commit changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "Update releases.json" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
 
