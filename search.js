@@ -11,17 +11,7 @@ async function search(){
     console.log(document.getElementById("searchbar").value.toLowerCase());
     const url = "releases.json"
     document.getElementById("searchstatus").innerHTML = "Searching...";
-    // Add Access Control Allow Origin headers
-    const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'https://rayrsn.github.io/JC141-Search/',
-            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-            'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
-        }
-    });
+    const response = await fetch(url);
     const results = await response.json();    
     results.forEach(element => {  
         // if results has display set to none then set it to block
