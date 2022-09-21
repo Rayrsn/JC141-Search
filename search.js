@@ -9,7 +9,7 @@ async function search(){
     document.getElementById("searchstatus").innerHTML = "";
     document.getElementById("results").innerHTML = "";
     console.log(document.getElementById("searchbar").value.toLowerCase());
-    const url = "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json"
+    const url = "releases.json"
     document.getElementById("searchstatus").innerHTML = "Searching...";
     // Add Access Control Allow Origin headers
     const response = await fetch(url, {

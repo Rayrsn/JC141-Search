@@ -1,0 +1,20 @@
+# download file from "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json" and push it to main branch every 5 minutes
+name: Build
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download file
+        run: |
+          wget 'https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json' -O releases.json
+      - name: Commit file
+        run: |
+          git config --local user.name "jc141x"
+          git add releases.json
+          git commit -m "Update releases.json"
+          git push
+
