@@ -5,7 +5,6 @@ document.getElementById("searchbar").addEventListener("keyup", function(event) {
     }
 });
 
-
 async function search(){
     document.getElementById("searchstatus").innerHTML = "";
     document.getElementById("results").innerHTML = "";
@@ -13,16 +12,14 @@ async function search(){
     const url = "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json"
     document.getElementById("searchstatus").innerHTML = "Searching...";
     const response = await fetch(url);
-    const results = await response.json();
-    // print every name in the results
-    
+    const results = await response.json();    
     results.forEach(element => {  
-        // if element with id of results has display set to none then set it to block
+        // if results has display set to none then set it to block
         if (document.getElementById("results").style.display === "none") {
             document.getElementById("results").style.display = "block";
         }
         var name = element.name.replace(" - jc141", "").replace(" [johncena141]", "");
-        // search for the element ignoring case
+        // search for the item ignoring case
         if (name.toLowerCase().includes(document.getElementById("searchbar").value.toLowerCase())) {
             console.log(name);
             if (document.getElementById("results").innerHTML == ""){
@@ -45,8 +42,8 @@ async function search(){
             document.getElementById("searchstatus").innerHTML = "";
         } 
     });
+    // if the element is not found then set the display to none
     if (document.getElementById("results").innerHTML == "") {
-        // if the element is not found then set the display to none
         document.getElementById("results").style.display = "none";
         document.getElementById("searchstatus").innerHTML = "No results found";
     } 
