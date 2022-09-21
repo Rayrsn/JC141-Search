@@ -17,9 +17,11 @@
 
 </head>
 <body>
-    <div class="search-box">
-        <input type="text" id="searchbar" placeholder="Search..."/>
-        <button type="reset" onclick="clearsearch()"></button>
+    <div id="searchboxparrent">
+        <div class="search-box">
+            <input type="text" id="searchbar" placeholder="Search..."/>
+            <button type="reset" onclick="clearsearch()"></button>
+        </div>    
     </div>    
     <div id="searchstatus"></div>
     <script src="search.js"></script>
@@ -30,8 +32,11 @@
             <span class="list-item-header list-header">DATE</span>
             <span class="list-item-header list-header">SIZE</span>
             <span class="list-item-header list-header">SEEDS</span>
-            <span class="list-item-header list-header">LEECHES</span>
+            <span class="list-item-header list-header">LEECHERS</span>
         </li>
-    
+    </ol>
+    <div id="made-with">
+        <a class="made-with-link" href="https://github.com/Rayrsn" target="_blank">Made with 🍑 by Rayr</a>
+    </div>
 </body>
 </html>

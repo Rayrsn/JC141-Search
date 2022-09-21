@@ -9,7 +9,7 @@ li.list-entry {
     border-top: 1px solid #ccc;
 }
 span.list-header{
-    background: #d2b9a6;
+	background: #dddcd5;
     border: 1px solid #fff;
 }
 span.list-item {
@@ -23,8 +23,43 @@ span.list-item-header {
     display: table-cell;
     padding: 3px;
 }
+/* center made-with */
+#made-with {
+	position: fixed;
+	bottom: 0;
+	padding-bottom: 5px;
+	font-size: 11px;
+	color: #fff;
+	z-index: 1000;
+	text-align: center;
+	width: 100%;
+	text-decoration: dotted;
+}
 
+a {
+	color: #8ab1db;
+	transition: all 0.2s ease-in-out;
+}
 
+a:hover {
+	color: #3784d6;
+}
+
+a.made-with-link {
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+}
+/* zoom on hover */
+a.made-with-link:hover {
+	color: #7c7c7c;
+	font-size: 14px;
+}
+
+#searchboxparrent {
+	text-align: center;
+	width: 100%;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 
@@ -41,7 +76,6 @@ span.list-item-header {
 	display: inline-block;
 	position: relative;
 	border-radius: 50px;
-    left : 50em;
 }
 
 .search-box input[type="text"] {
@@ -55,6 +89,7 @@ span.list-item-header {
 	box-sizing: border-box;
 	border-radius: 50px;
 	transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
+	background: #dddcd5;
 }
 
 .search-box input[type="text"]:focus {
@@ -64,6 +99,7 @@ span.list-item-header {
 .search-box input[type="text"]:focus, .search-box input[type="text"]:not(:placeholder-shown) {
 	width: 300px;
 	transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	background: #dddcd5;
 }
 
 .search-box input[type="text"]:focus + button[type="reset"], .search-box input[type="text"]:not(:placeholder-shown) + button[type="reset"] {
