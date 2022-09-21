@@ -1,4 +1,4 @@
-# download file from "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json" and push it to main branch every 5 minutes
+# download file from "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json" and push it to main branch every 2 hours
 name: Push releases.json
 
 on:
@@ -6,7 +6,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 jobs:
