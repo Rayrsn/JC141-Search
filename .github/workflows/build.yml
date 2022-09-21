@@ -20,8 +20,8 @@ jobs:
       - name: Commit changes
         run: |
           git config --local user.name "GitHub Actions"
-          git add .
-          git commit -m "Update releases.json" -a
+          git add -A
+          git diff-index --quiet HEAD || git commit -m 'Update releases.json'
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
