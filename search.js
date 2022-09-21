@@ -15,7 +15,11 @@ async function search(){
     const response = await fetch(url, {
         method: 'GET',
         headers: {
-            'Access-Control-Allow-Origin': '*',
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'https://rayrsn.github.io/JC141-Search/',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
         }
     });
     const results = await response.json();    

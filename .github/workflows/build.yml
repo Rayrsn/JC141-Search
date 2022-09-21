@@ -1,8 +1,8 @@
 # download file from "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json" and push it to main branch every 5 minutes
 name: Build
-on:
-  schedule:
-    - cron: '*/5 * * * *'
+# on:
+#   schedule:
+#     - cron: '*/5 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
