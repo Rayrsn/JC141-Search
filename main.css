@@ -25,7 +25,7 @@ span.list-item-header {
 }
 /* center made-with */
 #made-with {
-	position: relative;
+	position: fixed;
 	bottom: 0;
 	padding-bottom: 5px;
 	font-size: 11px;
@@ -34,6 +34,8 @@ span.list-item-header {
 	text-align: center;
 	width: 100%;
 	text-decoration: dotted;
+	left: 0px;
+	background-color: black;
 }
 
 a {
