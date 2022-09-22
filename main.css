@@ -23,7 +23,17 @@ span.list-item-header {
     display: table-cell;
     padding: 3px;
 }
+
+#title {
+	text-align: center;
+	width: 100%;
+	font-size: 60px;
+	color: #dddcd5;
+	transition: all 0.2s ease-in-out;
+}
+
 /* center made-with */
+
 #made-with {
 	position: fixed;
 	bottom: 0;
