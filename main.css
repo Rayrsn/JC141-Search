@@ -25,7 +25,7 @@ span.list-item-header {
 }
 /* center made-with */
 #made-with {
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	padding-bottom: 5px;
 	font-size: 11px;
