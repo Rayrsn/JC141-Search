@@ -35,7 +35,7 @@ async function search(){
     </li>`;}
             
             document.getElementById("results").innerHTML += '<li class="list-entry">';
-            document.getElementById("results").innerHTML += '<span class="list-item">'+name+'</span>';
+            document.getElementById("results").innerHTML += '<span class="list-item">'+name+'                     '+'</span>';
             document.getElementById("results").innerHTML += '<span class="list-item"><a href="'+element.url+'" target="_blank">'+element.url+'</a></span>';
             document.getElementById("results").innerHTML += '<span class="list-item">'+element.date+'</span>';
             document.getElementById("results").innerHTML += '<span class="list-item">'+element.size+'</span>';
