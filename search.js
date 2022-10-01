@@ -32,16 +32,19 @@ async function search(){
         <span class="list-item-header list-header">SEEDS</span>
         <span class="list-item-header list-header">LEECHES</span>
         <span class="list-item-header list-header">MAGNET</span>
+        <span class="list-item-header list-header">HASH</span>
     </li>`;}
             
             document.getElementById("results").innerHTML += '<li class="list-entry">';
-            document.getElementById("results").innerHTML += '<span class="list-item">'+name+'                     '+'</span>';
+            document.getElementById("results").innerHTML += '<span class="list-item">'+name+'</span>';
             document.getElementById("results").innerHTML += '<span class="list-item"><a href="'+element.url+'" target="_blank">'+element.url+'</a></span>';
             document.getElementById("results").innerHTML += '<span class="list-item">'+element.date+'</span>';
             document.getElementById("results").innerHTML += '<span class="list-item">'+element.size+'</span>';
             document.getElementById("results").innerHTML += '<span class="list-item">'+element.seeds+'</span>';
             document.getElementById("results").innerHTML += '<span class="list-item">'+element.leeches+'</span>';
             document.getElementById("results").innerHTML += '<span class="list-item"><a href="'+element.magnet+'">'+'Magnet'+'</a></span>';
+            document.getElementById("results").innerHTML += '<span class="list-item">'+element.hash+'</span>';
+
             document.getElementById("results").innerHTML += '</li>';
             document.getElementById("searchstatus").innerHTML = "";
         } 
