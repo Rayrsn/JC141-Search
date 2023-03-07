@@ -18,12 +18,12 @@ async function search(){
         if (document.getElementById("results").style.display === "none") {
             document.getElementById("results").style.display = "block";
         }
-        var name = element.name.replace(" - jc141", "").replace(" [johncena141]", "");
+        const name = element.name.replace(" - jc141", "").replace(" [johncena141]", "");
         // search for the item ignoring case
         if (name.toLowerCase().includes(document.getElementById("searchbar").value.toLowerCase())) {
             document.getElementById("title").style.transform = "scale(0)";
             console.log(name);
-            if (document.getElementById("results").innerHTML == ""){
+            if (document.getElementById("results").innerHTML === ""){
                 document.getElementById("results").innerHTML = `<li class="list-header">
         <span class="list-item-header list-header">Name</span>
         <span class="list-item-header list-header">URL</span>
@@ -56,7 +56,7 @@ async function search(){
     
 
     // if the result is not found then set the display to none
-    if (document.getElementById("results").innerHTML == "") {
+    if (document.getElementById("results").innerHTML === "") {
         document.getElementById("results").style.display = "none";
         document.getElementById("searchstatus").innerHTML = "No results found";
     } 
