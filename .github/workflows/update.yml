@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Download releases.json
-      # download file from "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json"
-        run: wget "https://github.com/jc141x/releases-feed/releases/download/feeds/releases.json" -O releases.json
+      # download file from "https://github.com/jc141x/releases-feed/releases/latest/download/releases.json"
+        run: wget "https://github.com/jc141x/releases-feed/releases/latest/download/releases.json" -O releases.json
       - name: Commit changes
         run: |
           git config --local user.name "GitHub Actions"
