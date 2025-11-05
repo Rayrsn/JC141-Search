@@ -88,6 +88,20 @@ a.made-with-link:hover {
     color: #fff;
 }
 
+#feed-notice {
+    position: relative;
+    top: 60px;
+    display: flex;
+    justify-content: center;
+    color: #888;
+    font-size: 12px;
+    font-style: italic;
+}
+
+#feed-notice p {
+    margin: 5px 0;
+}
+
 .search-box {
 	border: solid 5px black;
 	display: inline-block;
